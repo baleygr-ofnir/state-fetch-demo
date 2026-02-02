@@ -18,7 +18,10 @@ const Search = () => {
     };
 
     return (
-
+        <div className="searchStyle">
+            <input type="text" ref={searchText} />
+            <button onClick={handleSearch}>Sök</button>
+        </div>
     );
 };
 
