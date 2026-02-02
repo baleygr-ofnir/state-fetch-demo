@@ -2,6 +2,7 @@ import './Search.css';
 import type { Todo } from '../../types/Types';
 import { useRef, useState } from 'react';
 import TodoSearch from '../../services/TodoService';
+import TodoCardList from '../TodoCardList/TodoCardList';
 
 // LOGIC COMPONENT
 const Search = () => {
@@ -18,10 +19,13 @@ const Search = () => {
     };
 
     return (
-        <div className="searchStyle">
-            <input type="text" ref={searchText} />
-            <button onClick={handleSearch}>Sök</button>
-        </div>
+        <>
+            <div className="searchStyle">
+                <input type="text" ref={searchText} />
+                <button onClick={handleSearch}>Sök</button>
+            </div>
+            <TodoCardList todos={todoList} />
+        </>
     );
 };
 

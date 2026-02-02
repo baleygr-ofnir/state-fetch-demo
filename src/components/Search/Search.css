@@ -2,8 +2,8 @@
     height:50px;
     margin-top:20px;
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .searchStyle input{

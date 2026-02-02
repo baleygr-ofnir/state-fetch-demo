@@ -6,14 +6,14 @@ interface TodoCardListProps {
 }
 
 const TodoCardList = ({ todos }:TodoCardListProps) => {
-    const listItems = todos.map(todo => {
+    const list = todos.map(todo => {
         return (
             <TodoCard todo={todo} />
         );
     });
 
     return (
-        <>{listItems}</>
+        <>{list}</>
     );
 };
 
