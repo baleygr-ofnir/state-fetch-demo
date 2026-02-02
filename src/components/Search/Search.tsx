@@ -1,6 +1,7 @@
 import './Search.css';
 import type { Todo } from '../../types/Types';
 import { useRef, useState } from 'react';
+import TodoSearch from '../../services/TodoService';
 
 // LOGIC COMPONENT
 const Search = () => {
@@ -10,6 +11,9 @@ const Search = () => {
     const handleSearch = () => {
         if (searchText.current) {
             const condition: string = searchText.current.value;
+
+            TodoSearch(condition)
+            .then(todos => setTodoList(todos));
         }
     };
 
